@@ -1,13 +1,10 @@
 // @ts-check
-
+ 
 /**
  * @type {import('next').NextConfig}
  */
 const nextConfig = {
-  output: 'export',
-  basePath: '/vfx',
-  assetPrefix: '/vfx',
-  trailingSlash: true,
+  /* config options here */
 }
-
+ 
 export default nextConfig
