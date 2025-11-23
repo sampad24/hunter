@@ -10,8 +10,17 @@ import imaged from '@/app/components/works/images/3d.png'
 import motion from '@/app/components/works/images/motion.png'
 import vfx from '@/app/components/works/images/vfx.png'
 const Courses = () => {
-  const courseImages = [unreal, product, aivideo, special]
-  const moreCourses = [vfx, imaged, motion]
+  const courseImages = [
+    { img: unreal, slug: 'uecourse' },
+    { img: product, slug: 'product' },
+    { img: aivideo, slug: 'aivideo' },
+    { img: special, slug: 'special' }
+  ]
+  const moreCourses = [
+    { img: vfx, slug: 'vfx' },
+    { img: imaged, slug: '3d' },
+    { img: motion, slug: 'motion' }
+  ]
   return (
     // <div className='h-[100%] w-[100%]'>
     //   <div id='courses' className='h-[100%] w-[100%] back1 pb-10 pt-10 mt-0 '>
@@ -44,28 +53,26 @@ const Courses = () => {
 
         {/* First row of courses */}
         <div className="mt-10 px-4 grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
-          {courseImages.map((img, idx) => (
+          {courseImages.map((course, idx) => (
             <Link
               key={idx}
-              href="https://docs.google.com/forms/d/e/1FAIpQLSfWb-pRaLL7tEYDItzgyQJcbBWa2NfugxqLllK8aPdcCgTUOg/viewform?usp=header"
-              target="_blank"
-              className="rounded-2xl overflow-hidden shadow-2xl border-2 hover:scale-200 transition duration-300"
+              href={`/courses/${course.slug}`}
+              className="rounded-2xl overflow-hidden shadow-2xl border-2 hover:scale-150 transition duration-300"
             >
-              <Image src={img} alt={`course-${idx}`} className="w-full h-full object-cover" />
+              <Image src={course.img} alt={`course-${idx}`} className="w-full h-full object-cover" />
             </Link>
           ))}
         </div>
 
         {/* Second row of courses */}
         <div className="mt-15 px-4 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-          {moreCourses.map((img, idx) => (
+          {moreCourses.map((course, idx) => (
             <Link
               key={idx}
-              href="https://docs.google.com/forms/d/e/1FAIpQLSfWb-pRaLL7tEYDItzgyQJcbBWa2NfugxqLllK8aPdcCgTUOg/viewform?usp=header"
-              target="_blank"
-              className="rounded-2xl overflow-hidden shadow-2xl border-2 hover:scale-200 transition duration-300"
+              href={`/courses/${course.slug}`}
+              className="rounded-2xl overflow-hidden shadow-2xl border-2 hover:scale-150 transition duration-300"
             >
-              <Image src={img} alt={`course-${idx + 4}`} className="w-full h-full object-cover" />
+              <Image src={course.img} alt={`course-${idx + 4}`} className="w-full h-full object-cover" />
             </Link>
           ))}
         </div>

@@ -15,9 +15,47 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "JGVFX-ONLINE",
-  description: "This website is for vfx educational",
+  title: "JGVFX Online – Learn VFX, Animation, Game Design & AI",
+  description:
+    "JGVFX Online is a cutting-edge digital learning platform dedicated to empowering the next generation of creators in Visual Effects (VFX), Animation, Game Design, and Artificial Intelligence (AI).",
+  keywords: [
+    "JGVFX",
+    "VFX course",
+    "Animation course",
+    "Game design course",
+    "AI course",
+    "Online VFX institute",
+    "Best VFX academy",
+    "VFX training India",
+    "VFX school online",
+    "Learn animation online"
+  ],
+  openGraph: {
+    title: "JGVFX Online – Master VFX, Animation, Game Design & AI",
+    description:
+      "Learn industry-level VFX, Animation, Game Design, and AI with JGVFX Online – a next-gen digital learning platform.",
+    url: "",
+    siteName: "JGVFX Online",
+    images: [
+      {
+        url: "/logo.jpg",
+        width: 1200,
+        height: 630,
+        alt: "JGVFX Online Banner",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "JGVFX Online – Learn VFX & Animation",
+    description:
+      "Empowering the next generation of VFX, Animation, Game Design and AI creators.",
+    images: ["/app/components/logo.jpg"],
+  },
 };
+
 
 export default function RootLayout({ children }) {
   return (
